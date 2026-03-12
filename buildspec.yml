@@ -1,0 +1,23 @@
+Version: 0.2
+
+phases:
+  install:
+  runtime-version:
+  nodejs: 18
+
+  pre-build:
+  commands:
+    -echo installing dependencies
+
+  build:
+   commands:
+    -npm install
+    -npm run build
+
+  post_build:
+    commands:
+    -echo build completed
+
+ artifacts:
+  files:
+   - '**/*'
